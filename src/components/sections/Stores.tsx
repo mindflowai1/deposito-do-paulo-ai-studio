@@ -19,7 +19,7 @@ export function Stores() {
   ];
 
   return (
-    <section id="lojas" className="py-24 bg-paper border-t border-gray-100">
+    <section id="lojas" className="py-24 bg-gray-50">
       <div className="max-w-[1024px] mx-auto px-12">
         
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -39,35 +39,42 @@ export function Stores() {
               key={idx}
               className="bg-white rounded-[12px] overflow-hidden border border-[#F3F4F6] shadow-[0_1px_3px_rgba(0,0,0,0.05)] flex flex-col"
             >
-              {/* Map Placeholder */}
-              <div className="h-48 bg-gray-100 relative w-full overflow-hidden">
-                {/* Real implementation would use an iframe or map component here. Using a sophisticated stylized map placeholder */}
-                 <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
-                 <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-12 h-12 bg-brand rounded-full flex items-center justify-center text-white shadow-lg animate-pulse">
-                       <MapPin className="w-5 h-5" />
-                    </div>
-                 </div>
+              {/* Real Map Embed */}
+              <div className="h-64 bg-gray-100 relative w-full overflow-hidden">
+                <iframe
+                  title={store.name}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  src={`https://www.google.com/maps?q=${encodeURIComponent(store.address + ", Belo Horizonte, MG")}&output=embed`}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="transition-all duration-500"
+                ></iframe>
               </div>
               
-              <div className="p-[20px] flex-grow flex flex-col">
-                <h3 className="font-bold text-[14px] uppercase text-brand mb-4 flex items-center gap-[8px] tracking-[0.5px]">
-                  <MapPin className="w-4 h-4" />
+              <div className="p-8 flex-grow flex flex-col bg-white">
+                <h3 className="font-black text-xl uppercase italic text-brand mb-4 flex items-center gap-2 tracking-tighter leading-none">
+                  <MapPin className="w-5 h-5" />
                   {store.name}
                 </h3>
                 
                 <div className="space-y-4 mb-8 flex-grow">
                   <div className="flex flex-col text-ink-muted">
-                    <span className="text-[13px] font-bold text-ink mb-1">{store.address.split(' - ')[0]}</span>
-                    <span className="text-[12px] leading-[1.4]">Bairro {store.address.split(' - ')[1]}</span>
-                    <span className="text-[12px] leading-[1.4] mt-2">{store.hours}</span>
+                    <span className="text-lg font-black text-ink mb-1 tracking-tight">{store.address.split(' - ')[0]}</span>
+                    <span className="text-sm font-medium leading-relaxed opacity-80 italic">Bairro {store.address.split(' - ')[1]}</span>
+                    <div className="flex items-center gap-2 mt-4 text-xs font-bold uppercase tracking-widest text-ink/40">
+                      <Clock className="w-4 h-4" />
+                      {store.hours}
+                    </div>
                   </div>
                 </div>
 
-                <Button variant="outline" className="w-full gap-2" asChild>
+                <Button variant="outline" className="w-full gap-2 py-6 border-2 hover:bg-brand hover:border-brand hover:text-white transition-all font-black uppercase italic tracking-tighter" asChild>
                   <a href={store.mapUrl} target="_blank" rel="noopener noreferrer">
-                    <Navigation className="w-4 h-4" />
-                    Traçar Rota
+                    <Navigation className="w-5 h-5" />
+                    Traçar Rota no GPS
                   </a>
                 </Button>
               </div>

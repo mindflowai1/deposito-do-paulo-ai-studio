@@ -4,47 +4,48 @@ import { motion } from "motion/react";
 
 export function Professionals() {
   return (
-    <section id="profissionais" className="py-24 bg-ink relative overflow-hidden">
+    <section id="profissionais" className="pt-12 pb-24 md:py-24 bg-white relative overflow-hidden">
       {/* Background Graphic */}
-      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 opacity-10">
-        <svg width="800" height="800" viewBox="0 0 100 100" className="w-[800px] h-[800px] fill-current text-white">
+      <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/3 opacity-[0.03]">
+        <svg width="800" height="800" viewBox="0 0 100 100" className="w-[800px] h-[800px] fill-current text-ink">
           <circle cx="50" cy="50" r="50" />
         </svg>
       </div>
 
-      <div className="max-w-[1024px] mx-auto px-12 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+      <div className="max-w-[1024px] mx-auto px-5 md:px-12 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-24 items-center">
           
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="w-full overflow-hidden"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-white text-xs font-semibold uppercase tracking-wider mb-8">
-              <HardHat className="w-4 h-4 text-brand" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 text-ink text-[10px] md:text-xs font-bold uppercase tracking-wider mb-6">
+              <HardHat className="w-3.5 h-3.5 text-brand" />
               Parceiro do Profissional
             </div>
             
-            <h2 className="text-[32px] font-extrabold text-white mb-6 leading-tight">
-              A força que sua empreitada precisa.
+            <h2 className="text-[26px] sm:text-[32px] md:text-5xl font-black text-ink mb-6 leading-[1.1] uppercase italic tracking-tighter text-balance">
+              A força que sua <span className="text-brand">empreitada</span> precisa.
             </h2>
             
-            <p className="text-lg text-white/70 mb-8 max-w-lg">
-              Pedreiros, eletricistas, encanadores e arquitetos: o Depósito do Paulo é parceiro de quem vive da obra. Oferecemos atendimento rápido, facilidade no dia a dia e relacionamento comercial duradouro.
+            <p className="text-base sm:text-lg text-ink-muted mb-8 max-w-full md:max-w-lg text-balance leading-relaxed">
+              Pedreiros, eletricistas, encanadores e arquitetos: o Depósito do Paulo é parceiro de quem vive da obra. Oferecemos atendimento rápido e especializado.
             </p>
             
-            <ul className="space-y-4 mb-10 text-white/90">
-              {['Atendimento prioritário via WhatsApp', 'Condições comerciais dedicadas', 'Flexibilidade e rapidez na entrega'].map((item, idx) => (
+            <ul className="space-y-4 mb-10 text-ink-muted font-medium text-sm sm:text-base">
+              {['Atendimento prioritário via WhatsApp', 'Condições comerciais dedicadas', 'Rapidez na entrega'].map((item, idx) => (
                 <li key={idx} className="flex items-center gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-brand"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-brand shrink-0"></div>
                   {item}
                 </li>
               ))}
             </ul>
 
-            <Button variant="whatsapp" className="w-full sm:w-auto" asChild>
-              <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
+            <Button variant="whatsapp" size="lg" className="w-full sm:w-auto px-6 h-14 md:h-16 text-sm md:text-lg font-black uppercase italic tracking-tighter rounded-xl whitespace-normal text-center py-2" asChild>
+              <a href="https://wa.me/553132836543" target="_blank" rel="noopener noreferrer">
                 Falar com consultor exclusivo
               </a>
             </Button>

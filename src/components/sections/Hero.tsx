@@ -9,24 +9,24 @@ export function Hero() {
     <section id="inicio" className="relative h-screen bg-black overflow-hidden flex flex-col justify-center">
       {/* Background Image Layer */}
       <div className="absolute inset-0 z-0">
-        <img 
+        <img
           src={imageUrl}
-          alt="Depósito de materiais de construção" 
+          alt="Depósito de materiais de construção"
           className="w-full h-full object-cover opacity-60"
         />
         {/* Simple dark overlay, no gradients */}
         <div className="absolute inset-0 bg-black/20"></div>
       </div>
-      
+
       {/* Content Container */}
-      <div className="max-w-[1024px] mx-auto px-6 md:px-12 relative z-10 h-full flex flex-col justify-between py-16 md:py-24 lg:py-32">
-        
-        {/* Top Element: DESDE 2007 */}
-        <motion.div 
+      <div className="max-w-[1024px] mx-auto px-6 md:px-12 relative z-10 h-full flex flex-col justify-between pt-24 pb-16 md:py-24 lg:py-32">
+
+        {/* Top Element: DESDE 2007 (Hidden on mobile) */}
+        <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col items-start mt-8 md:mt-0"
+          className="hidden md:flex flex-col items-start mt-8 md:mt-0"
         >
           <span className="text-white text-xs md:text-sm lg:text-base font-light tracking-[0.4em] uppercase mb-[-2px] md:mb-[-5px] ml-1">Desde</span>
           <div className="flex items-center leading-none">
@@ -47,7 +47,7 @@ export function Hero() {
               <span className="block">Soluções</span>
             </h1>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -64,25 +64,25 @@ export function Hero() {
 
         {/* Bottom Features Bar */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 border-t border-white/10 pt-6 md:pt-12">
-          <FeatureItem 
+          <FeatureItem
             icon={<Target className="text-brand" size={28} />}
             title="PREÇO JUSTO"
             desc="Cobrimos qualquer orçamento"
             index={0}
           />
-          <FeatureItem 
+          <FeatureItem
             icon={<Truck className="text-brand" size={28} />}
             title="ENTREGA RÁPIDA"
             desc="Agilidade quando você mais precisa"
             index={1}
           />
-          <FeatureItem 
+          <FeatureItem
             icon={<Users className="text-brand" size={28} />}
             title="ATENDIMENTO"
             desc="Especializado para sua obra"
             index={2}
           />
-          <FeatureItem 
+          <FeatureItem
             icon={<Store className="text-brand" size={28} />}
             title="2 LOJAS"
             desc="Mais perto de você, sempre!"
@@ -93,17 +93,17 @@ export function Hero() {
 
       {/* Right Side Vertical Badges (LG Only) */}
       <div className="hidden lg:flex absolute right-12 top-1/2 -translate-y-1/2 flex-col space-y-16 items-center z-20">
-        <VerticalBadge 
+        <VerticalBadge
           icon={<Box size={32} />}
           text="Do alicerce ao acabamento"
           delay={1.2}
         />
-        <VerticalBadge 
+        <VerticalBadge
           icon={<House size={32} />}
           text="Tudo em um só lugar"
           delay={1.4}
         />
-        <VerticalBadge 
+        <VerticalBadge
           icon={<ShieldCheck size={32} />}
           text="Tradição e Confiança"
           delay={1.6}
@@ -115,7 +115,7 @@ export function Hero() {
 
 function FeatureItem({ icon, title, desc, index }: { icon: ReactNode, title: string, desc: string, index: number }) {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

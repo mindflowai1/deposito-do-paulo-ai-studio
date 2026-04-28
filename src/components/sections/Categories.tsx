@@ -56,7 +56,7 @@ export function Categories() {
       name: "e muito mais",
       icon: PlusCircle,
       color: "text-ink-muted",
-      image: "/assets/products/obra.jpg",
+      image: "/assets/products/muito-mais.png",
       description: "Ferramentas, hidráulica, elétrica e acabamentos."
     },
   ];

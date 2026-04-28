@@ -59,9 +59,8 @@ export function Professionals() {
             className="hidden lg:block relative"
           >
             <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative">
-              <div className="absolute inset-0 bg-brand/20 mix-blend-multiply z-10"></div>
               <img 
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop" 
+                src="/assets/professionals-new.jpg" 
                 alt="Profissional da construção trabalhando" 
                 className="w-full h-full object-cover"
               />

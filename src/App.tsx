@@ -1,6 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
 import { Hero } from "@/components/sections/Hero";
-import { TrustBadges } from "@/components/sections/TrustBadges";
 import { Differentials } from "@/components/sections/Differentials";
 import { Categories } from "@/components/sections/Categories";
 import { Professionals } from "@/components/sections/Professionals";
@@ -12,7 +11,6 @@ export default function App() {
   return (
     <Layout>
       <Hero />
-      <TrustBadges />
       <Differentials />
       <Categories />
       <Professionals />

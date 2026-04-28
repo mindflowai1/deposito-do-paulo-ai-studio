@@ -26,7 +26,7 @@ export function Differentials() {
   ];
 
   return (
-    <section id="diferenciais" className="py-24 bg-paper">
+    <section id="diferenciais" className="py-24 bg-white relative">
       <div className="max-w-[1024px] mx-auto px-12">
         <div className="mb-16 max-w-2xl">
           <h2 className="text-3xl lg:text-4xl font-bold text-ink mb-4 tracking-tight">Construa com quem tem base.</h2>

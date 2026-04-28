@@ -1,44 +1,49 @@
 import { motion } from "motion/react";
-import { PaintRoller, Droplet, Layers, Lightbulb, Wrench, Zap } from "lucide-react";
+import { PaintRoller, Package, Grid3X3, Layers, Mountain, PlusCircle, Maximize, Square } from "lucide-react";
 
 export function Categories() {
-  const categories = [
-    { name: "Tintas e Acessórios", icon: PaintRoller, color: "bg-blue-50 text-blue-600" },
-    { name: "Caixas d'água e Telhas", icon: Droplet, color: "bg-cyan-50 text-cyan-600" },
-    { name: "Pisos e Revestimentos", icon: Layers, color: "bg-orange-50 text-orange-600" },
-    { name: "Hidráulica", icon: Wrench, color: "bg-emerald-50 text-emerald-600" },
-    { name: "Ferramentas", icon: Wrench, color: "bg-slate-50 text-slate-600" },
-    { name: "Elétrica e Iluminação", icon: Lightbulb, color: "bg-yellow-50 text-yellow-600" },
+  const products = [
+    { name: "Areia", icon: Mountain, color: "text-amber-600" },
+    { name: "Brita", icon: Layers, color: "text-slate-500" },
+    { name: "Cimento", icon: Package, color: "text-gray-600" },
+    { name: "Tijolos", icon: Grid3X3, color: "text-orange-700" },
+    { name: "Pisos", icon: Square, color: "text-zinc-500" },
+    { name: "Tintas", icon: PaintRoller, color: "text-brand" },
+    { name: "Janelas", icon: Maximize, color: "text-sky-600" },
+    { name: "e muito mais", icon: PlusCircle, color: "text-ink-muted" },
   ];
 
   return (
-    <section id="categorias" className="py-24 bg-paper">
-      <div className="max-w-[1024px] mx-auto px-12">
+    <section id="categorias" className="py-24 bg-white">
+      <div className="max-w-[1024px] mx-auto px-6 md:px-12">
         
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-ink mb-4 tracking-tight">Do básico ao acabamento, tudo em um só lugar.</h2>
+          <h2 className="text-3xl lg:text-5xl font-black text-ink mb-4 tracking-tighter uppercase italic">Nossos Produtos</h2>
           <p className="text-lg text-ink-muted">
-            Trabalhamos com as melhores marcas do mercado para garantir a qualidade que a sua obra exige.
+            Tudo o que você precisa para sua construção, com a qualidade das melhores marcas do mercado.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
-          {categories.map((cat, idx) => {
-            const Icon = cat.icon;
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {products.map((item, idx) => {
+            const Icon = item.icon;
             return (
               <motion.a
                 href="https://wa.me/5511999999999"
                 target="_blank"
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
                 key={idx}
-                className="bg-[#F9FAFB] p-[16px] rounded-[6px] border border-[#E5E7EB] text-center hover:bg-white hover:border-brand/30 transition-all flex flex-col items-center gap-[8px]"
+                className="group relative bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand/20 transition-all flex flex-col items-center gap-4 text-center overflow-hidden"
               >
-                <Icon className={`w-6 h-6 ${cat.color.split(' ')[1]}`} />
-                <span className="font-semibold text-ink text-[12px]">{cat.name}</span>
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className={`shrink-0 p-4 rounded-xl bg-gray-50 group-hover:bg-brand/10 transition-colors z-10`}>
+                  <Icon className={`w-8 h-8 ${item.color}`} />
+                </div>
+                <span className="font-bold text-ink text-sm md:text-base uppercase tracking-tight z-10">{item.name}</span>
               </motion.a>
             )
           })}

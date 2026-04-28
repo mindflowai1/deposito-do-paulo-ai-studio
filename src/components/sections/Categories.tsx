@@ -3,58 +3,58 @@ import { PaintRoller, Package, Grid3X3, Layers, Mountain, PlusCircle, Maximize, 
 
 export function Categories() {
   const products = [
-    { 
-      name: "Areia", 
-      icon: Mountain, 
+    {
+      name: "Areia",
+      icon: Mountain,
       color: "text-amber-600",
       image: "/assets/products/areia.jpg",
       description: "Areia fina, média e grossa para todas as fases."
     },
-    { 
-      name: "Brita", 
-      icon: Layers, 
+    {
+      name: "Brita",
+      icon: Layers,
       color: "text-slate-500",
-      image: "/assets/products/brita.jpg",
+      image: "/assets/products/brita-nova.jpg",
       description: "Britas de diversos tamanhos para concreto e base."
     },
-    { 
-      name: "Cimento", 
-      icon: Package, 
+    {
+      name: "Cimento",
+      icon: Package,
       color: "text-gray-600",
       image: "/assets/products/cimento.jpg",
       description: "Cimento CP-II e CP-III das melhores marcas."
     },
-    { 
-      name: "Tijolos", 
-      icon: Grid3X3, 
+    {
+      name: "Tijolos",
+      icon: Grid3X3,
       color: "text-orange-700",
       image: "/assets/products/tijolos.webp",
       description: "Tijolos baianos e cerâmicos de alta resistência."
     },
-    { 
-      name: "Pisos", 
-      icon: Square, 
+    {
+      name: "Pisos",
+      icon: Square,
       color: "text-zinc-500",
       image: "/assets/products/pisos.jpg",
       description: "Porcelanatos e revestimentos para todos os ambientes."
     },
-    { 
-      name: "Tintas", 
-      icon: PaintRoller, 
+    {
+      name: "Tintas",
+      icon: PaintRoller,
       color: "text-brand",
-      image: "/assets/products/tintas.jpg",
+      image: "/assets/products/tintas-nova.jpg",
       description: "Linha completa de cores e acabamentos premium."
     },
-    { 
-      name: "Janelas", 
-      icon: Maximize, 
+    {
+      name: "Janelas",
+      icon: Maximize,
       color: "text-sky-600",
       image: "/assets/products/janelas.jpg",
       description: "Esquadrias de alumínio e madeira sob medida."
     },
-    { 
-      name: "e muito mais", 
-      icon: PlusCircle, 
+    {
+      name: "e muito mais",
+      icon: PlusCircle,
       color: "text-ink-muted",
       image: "/assets/products/obra.jpg",
       description: "Ferramentas, hidráulica, elétrica e acabamentos."
@@ -64,7 +64,7 @@ export function Categories() {
   return (
     <section id="categorias" className="py-16 md:py-24 bg-gray-50">
       <div className="max-w-[1200px] mx-auto px-6">
-        
+
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div className="max-w-2xl">
             <h2 className="text-3xl lg:text-5xl font-black text-ink mb-4 tracking-tighter uppercase italic leading-none">
@@ -74,7 +74,7 @@ export function Categories() {
               Tudo o que você precisa para sua construção, com a qualidade das melhores marcas do mercado e entrega rápida.
             </p>
           </div>
-          <motion.a 
+          <motion.a
             href="https://wa.me/553132836543"
             whileHover={{ x: 5 }}
             className="hidden md:flex items-center gap-2 text-brand font-bold uppercase tracking-wider text-sm hover:underline"
@@ -98,8 +98,8 @@ export function Categories() {
               >
                 {/* Image Background */}
                 <div className="absolute inset-0">
-                  <img 
-                    src={item.image} 
+                  <img
+                    src={item.image}
                     alt={item.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -114,11 +114,11 @@ export function Categories() {
                     </div>
                     <h3 className="font-black text-xl uppercase italic tracking-tighter">{item.name}</h3>
                   </div>
-                  
+
                   <p className="text-sm text-gray-300 line-clamp-2 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                     {item.description}
                   </p>
-                  
+
                   <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 delay-100">
                     <span className="text-[10px] uppercase font-bold tracking-widest text-brand">Ver lojas</span>
                     <ArrowRight className="w-4 h-4 text-brand" />
@@ -130,7 +130,7 @@ export function Categories() {
         </div>
 
         <div className="mt-8 text-center md:hidden">
-          <a 
+          <a
             href="https://wa.me/553132836543"
             className="inline-flex items-center gap-2 bg-brand text-white px-8 py-4 rounded-full font-black uppercase italic tracking-tighter hover:bg-brand-dark transition-all shadow-lg shadow-brand/20"
           >
@@ -140,4 +140,4 @@ export function Categories() {
       </div>
     </section>
   );
-}
+}

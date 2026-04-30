@@ -56,7 +56,7 @@ export function Header() {
 
       <div className="hidden md:flex items-center">
         <Button variant="whatsapp" size="sm" asChild>
-          <a href="https://wa.me/553132836543" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/553132836543?text=Olá!%20Vim%20pelo%20site%20do%20Depósito%20do%20Paulo%20e%20gostaria%20de%20fazer%20um%20orçamento.%20Pode%20me%20ajudar?" target="_blank" rel="noopener noreferrer">
             Orçamento pelo WhatsApp
           </a>
         </Button>
@@ -107,7 +107,7 @@ export function Header() {
                 className="mt-8 pt-8 border-t border-white/10"
               >
                 <Button variant="whatsapp" className="w-full text-lg py-6" asChild>
-                  <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/553132836543?text=Olá!%20Vim%20pelo%20site%20do%20Depósito%20do%20Paulo%20e%20gostaria%20de%20fazer%20um%20orçamento.%20Pode%20me%20ajudar?" target="_blank" rel="noopener noreferrer">
                     Fazer Orçamento
                   </a>
                 </Button>

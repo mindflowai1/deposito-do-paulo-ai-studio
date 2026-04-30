@@ -45,7 +45,7 @@ export function Professionals() {
             </ul>
 
             <Button variant="whatsapp" size="lg" className="w-full sm:w-auto px-6 h-14 md:h-16 text-sm md:text-lg font-black uppercase italic tracking-tighter rounded-xl whitespace-normal text-center py-2" asChild>
-              <a href="https://wa.me/553132836543" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/553132836543?text=Olá!%20Vim%20pelo%20site%20do%20Depósito%20do%20Paulo%20e%20gostaria%20de%20fazer%20um%20orçamento.%20Pode%20me%20ajudar?" target="_blank" rel="noopener noreferrer">
                 Falar com consultor exclusivo
               </a>
             </Button>

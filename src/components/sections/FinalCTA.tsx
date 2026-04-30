@@ -33,7 +33,7 @@ export function FinalCTA() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button variant="whatsapp" size="lg" className="h-16 px-10 text-xl font-black rounded-xl w-full sm:w-auto shadow-2xl hover:shadow-brand/20 uppercase tracking-tighter italic" asChild>
-              <a href="https://wa.me/553132836543" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/553132836543?text=Olá!%20Vim%20pelo%20site%20do%20Depósito%20do%20Paulo%20e%20gostaria%20de%20fazer%20um%20orçamento.%20Pode%20me%20ajudar?" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-6 h-6 mr-3" />
                 Quero meu orçamento
               </a>

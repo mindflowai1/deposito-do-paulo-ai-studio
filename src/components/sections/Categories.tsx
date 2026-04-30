@@ -75,7 +75,7 @@ export function Categories() {
             </p>
           </div>
           <motion.a
-            href="https://wa.me/553132836543"
+            href="https://wa.me/553132836543?text=Olá!%20Vim%20pelo%20site%20do%20Depósito%20do%20Paulo%20e%20gostaria%20de%20solicitar%20um%20orçamento.%20Pode%20me%20ajudar?"
             whileHover={{ x: 5 }}
             className="hidden md:flex items-center gap-2 text-brand font-bold uppercase tracking-wider text-sm hover:underline"
           >
@@ -131,7 +131,7 @@ export function Categories() {
 
         <div className="mt-8 text-center md:hidden">
           <a
-            href="https://wa.me/553132836543"
+            href="https://wa.me/553132836543?text=Olá!%20Vim%20pelo%20site%20do%20Depósito%20do%20Paulo%20e%20gostaria%20de%20solicitar%20um%20orçamento.%20Pode%20me%20ajudar?"
             className="inline-flex items-center gap-2 bg-brand text-white px-8 py-4 rounded-full font-black uppercase italic tracking-tighter hover:bg-brand-dark transition-all shadow-lg shadow-brand/20"
           >
             Ver catálogo completo <ArrowRight className="w-5 h-5" />

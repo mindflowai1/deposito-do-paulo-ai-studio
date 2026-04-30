@@ -13,7 +13,7 @@ export function FloatingWhatsApp() {
         Fale conosco agora! 👋
       </div>
       <a
-        href="https://wa.me/553132836543"
+        href="https://wa.me/553132836543?text=Olá!%20Vim%20pelo%20site%20do%20Depósito%20do%20Paulo%20e%20gostaria%20de%20fazer%20um%20orçamento.%20Pode%20me%20ajudar?"
         target="_blank"
         rel="noopener noreferrer"
         className="w-[64px] h-[64px] bg-whatsapp text-white rounded-full flex items-center justify-center shadow-[0_10px_25px_rgba(37,211,102,0.4)] border-[4px] border-white hover:bg-whatsapp-dark focus:outline-none focus:ring-4 focus:ring-whatsapp/20 transition-all hover:scale-105 active:scale-95"

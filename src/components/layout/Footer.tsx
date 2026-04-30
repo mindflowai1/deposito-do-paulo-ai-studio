@@ -39,7 +39,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm font-medium">
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 text-brand shrink-0" />
-                <a href="https://wa.me/553132836543" target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors">(31) 3283-6543</a>
+                <a href="https://wa.me/553132836543?text=Olá!%20Vim%20pelo%20site%20do%20Depósito%20do%20Paulo%20e%20gostaria%20de%20fazer%20um%20orçamento.%20Pode%20me%20ajudar?" target="_blank" rel="noopener noreferrer" className="hover:text-brand transition-colors">(31) 3283-6543</a>
               </li>
               <li className="flex items-center gap-2">
                 <Instagram className="w-4 h-4 text-brand shrink-0" />
